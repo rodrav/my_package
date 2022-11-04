@@ -1,0 +1,40 @@
+---
+title: "My package"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{My package}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Fatality Analysis Reporting System (FARS)
+
+The package includes differents function in order to show accidents in the US. Next, you will be able to see a summary for each function.
+
+## 'fars_read' function
+
+The function has like an input a filename character from 'make_filename' function. It is neccesary the file with data about the FARS in the US, then the function can read it and convert in a data frame.
+
+## 'make_filename function
+
+The function create the filename.
+
+## 'fars_read_years' function
+
+The function take both function 'make_filename' and 'fars_read_years' to create a single data frame or a list.
+
+## 'fars_summarize_years' function
+
+The function show summarize years. 
+
+## 'fars_map_state function 
+
+The function plot a graph with points that represents accidents for a specific state of US during a given year.
+
