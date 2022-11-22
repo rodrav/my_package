@@ -40,5 +40,4 @@ The function plot a graph with points that represents accidents for a specific s
 
 ```{r setup}
 fars_map_state(state.num = 45 , year = 2013)
-
 ```
