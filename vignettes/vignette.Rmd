@@ -39,5 +39,5 @@ The function show summarize years.
 The function plot a graph with points that represents accidents for a specific state of US during a given year.
 
 ```{r setup}
-fars_map_state(state.num = 45 , year = 2013)
+#fars_map_state(state.num=6, year=2013)
 ```
