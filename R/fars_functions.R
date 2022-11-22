@@ -18,7 +18,6 @@
 #' @importFrom dplyr tbl_df
 #'
 #' @export
-
 fars_read <- function(filename) {
   if(!file.exists(filename))
     stop("file '", filename, "' does not exist")
@@ -43,10 +42,9 @@ fars_read <- function(filename) {
 #' \dontrun{make_filename(year=2013)}
 #'
 #' @export
-
 make_filename <- function(year) {
   year <- as.integer(year)
-  sprintf("accident_%d.csv.bz2", year)
+  sprintf("accident_%d.csv", year)
 }
 
 #' This function use the function fars_read one or more times according to the amount of inputs.
@@ -69,7 +67,6 @@ make_filename <- function(year) {
 #' @importFrom rlang .data
 #'
 #' @export
-
 fars_read_years <- function(years) {
   lapply(years, function(year) {
     file <- make_filename(year)
@@ -105,7 +102,6 @@ fars_read_years <- function(years) {
 #' @importFrom magrittr %>%
 #'
 #' @export
-
 fars_summarize_years <- function(years) {
   dat_list <- fars_read_years(years)
   dplyr::bind_rows(dat_list) %>%
@@ -135,7 +131,6 @@ fars_summarize_years <- function(years) {
 #' @importFrom graphics points
 #'
 #' @export
-
 fars_map_state <- function(state.num, year) {
   filename <- make_filename(year)
   data <- fars_read(filename)
